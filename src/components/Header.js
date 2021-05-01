@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <div>
         <header>
-          <h1>Expensify</h1>
+          <h1>Depensify</h1>
         </header>
         <ul>
             <li><NavLink exact={true} to="/" activeClassName="is-active">Home page</NavLink></li>

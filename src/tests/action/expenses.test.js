@@ -1,4 +1,3 @@
-import { string } from 'prop-types';
 import {addExpense, editExpense, removeExpense } from '../../actions/expenses';
 
 
@@ -38,7 +37,7 @@ test('Should setup add expense action object', () =>{
 
 test('Should return addExpense default', () =>{
     const action = addExpense();
-    expect(action) .toEqual({
+    expect(action).toEqual({
     expense :{
     description : '',
      note :'', 

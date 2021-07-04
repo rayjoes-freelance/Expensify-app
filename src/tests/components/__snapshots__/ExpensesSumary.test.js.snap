@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should count the good number of expenses 1`] = `
+<div>
+  <h4>
+    Viewing 3 expenses totalling of $1,141.96
+  </h4>
+</div>
+`;

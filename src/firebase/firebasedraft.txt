@@ -1,0 +1,56 @@
+/*database.ref('notes').push({
+    titile: 'Course Topic',
+    body: 'React Native, Angular, Python'
+  });*/
+  
+  /*const onValueChange = database.ref().on('value', (snapchot) => {
+    const person = snapchot.val();
+    console.log(`${person.name} is a ${person.job.title} at ${person.job.company}`);
+  }, (e) => {
+    console.log('Error with data fetching ', e);
+  });
+
+ setTimeout(() => {
+  database.ref().update({
+    name: 'Rayjoes'
+  })
+ }, 3500);*/
+
+
+
+  /*  Getting data fetch from the database only once
+  database.ref()
+    .once('value')
+    .then((snapshot) => {
+      const db = snapshot.val();
+      console.log(db);
+    })
+    .catch((e) => {
+      conslos.log('Error fetching the data', e);
+    })
+*/
+/*database.ref().set({
+      name: 'Rayjoes Bollini',
+      age: 20,
+      job:{
+        title : 'Software developer',
+        company: 'Google'
+      },
+      stressLevel: 6,
+      isSingle: true,
+      location:{
+          city:'Cherbourg',
+          country:'France'
+      }
+  }).then(() => {
+    console.log('Data is saved');
+  }).catch((e) => {
+    console.log('This failed.', e);
+  });
+
+  database.ref().update({
+    stressLevel: 9 ,
+    'job/company': 'Amazon',
+    'location/city': 'Seattle'
+  });
+*/

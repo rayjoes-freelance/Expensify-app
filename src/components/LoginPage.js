@@ -1,15 +1,15 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { startLogin } from '../actions/popup';
 
-
-export default () => (
-    <div>
-        <h1>Login Page</h1>
-        <form>
-            <label><b>Username</b></label>
-            <input type='texte' placeholder='Username' required/>
-            <label><b>Password</b></label>
-            <input type='password' placeholder='Password' required/>
-            <button>Login</button>
-        </form>
-    </div>
+export const LoginPage = ({ startLogin }) => (
+  <div>
+    <button onClick={startLogin}>Login</button>
+  </div>
 );
+
+const mapDispatchToProps = (dispatch) => ({
+  startLogin: () => dispatch(startLogin())
+});
+
+export default connect(undefined, mapDispatchToProps)(LoginPage);

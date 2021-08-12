@@ -6,20 +6,29 @@ import { startEditExpense, startRemoveExpense } from '../actions/expenses';
 export class EditExpensePage extends React.Component {
   onSubmit = (expense) => {
     this.props.startEditExpense(this.props.expense.id, expense);
-    this.props.history.push('/');
+    this.props.history.push('/dashboard');
   };
   onRemove = () => {
     this.props.startRemoveExpense({ id: this.props.expense.id });
-    this.props.history.push('/');
+    this.props.history.push('/dashboard');
   };
   render() {
     return (
       <div>
-        <ExpenseForm
+        <div className="page-header">
+          <div className="page-header__title">
+            <h1 className="content-container">Edit Expense</h1>
+          </div>
+        </div>
+        <div className="content-container">
+          <ExpenseForm
           expense={this.props.expense}
           onSubmit={this.onSubmit}
-        />
-        <button onClick={this.onRemove}>Remove</button>
+          />
+          <div>
+          <button onClick={this.onRemove} className="button-layout button--secondary">Remove expense</button>
+          </div>
+        </div>        
       </div>
     );
   }
